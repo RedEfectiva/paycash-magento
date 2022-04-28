@@ -1,0 +1,33 @@
+
+<div>
+    <h2> 
+        <?php 
+            $instruct = $block->obtenerInstruct(); 
+            echo $instruct;
+        ?>  
+    </h2>
+    </p>
+    <img src="<?php echo $block->obtenerBarCode(); ?>" alt="SuccessPayCash" width="450" height="90">
+    </p>
+    <h2>
+        Referencia de pago: 
+        <?php 
+            $mensaje = $block->refDePago(); 
+            echo $mensaje;
+        ?>  
+    </h2>
+    </p>
+    <h2>
+        Esta referencia caduca el: 
+        <?php 
+            $mensaje = $block->obtenerExpirationDt(); 
+            echo $mensaje;
+        ?>  
+    </h2>
+    </p>
+</div>
+
+
+
+
+

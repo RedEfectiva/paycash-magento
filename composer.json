@@ -1,0 +1,22 @@
+{
+    "name": "paycash/magento",
+    "description": "Paycash integration for Magento 2 ",
+    "type": "magento2-module",    
+    "minimum-stability": "dev",
+    "license": "Apache-2.0",
+    "version":"2.3.2",
+   
+    "authors": [
+        {
+            "name": "paycash",
+            "homepage": "http://realvirtual.com.mx",
+            "email": "mmunuzuri@realvirtual.com.mx"
+        }
+        
+    ],
+    "extra": {
+        "map": [
+            ["*", "Paycash/Pay"]
+        ]
+    }
+}

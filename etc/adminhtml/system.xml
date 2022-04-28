@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="paycash_pay" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Paycash</label>
+                <comment>
+                    <![CDATA[<a href="https://www.paycashglobal.com/" target="_blank">Crea tu cuenta en Paycash Global </a>]]>
+                </comment>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Activar/Desactivar</label>
+                    <validate>required-entry</validate>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Activa o desactiva el método de pago.</comment> 
+                </field>                
+                <field id="sandbox" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Modo Pruebas</label>
+                    <validate>required-entry</validate>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Activa el modo de pruebas al estar seleccionado.</comment> 
+                </field> 
+                <field id="title" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Mensaje</label>                    
+                    <validate>required-entry</validate>                      
+                    <comment>Título mostrado en la página de pago.</comment> 
+                </field> 
+                <field id="test_apikey" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>PayCash API Test Key</label>                    
+                    <validate>required-entry</validate>                      
+                    <comment>Llave API de ambiente de pruebas (sandbox).</comment> 
+                </field> 
+                <field id="production_apikey" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>PayCash API Production Key</label>                    
+                    <validate>required-entry</validate>                      
+                    <comment>Llave API de producción.</comment> 
+                </field>
+                <field id="country" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>País</label>
+                    <validate>required-entry</validate>
+                    <source_model>Paycash\Pay\Model\Source\Countries::getOptions</source_model>     
+                    <comment>Seleccione el país.</comment>                
+                </field>
+                <field id="validity" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Vigencia (en días)</label>                    
+                    <validate>validate-number validate-zero-or-greater</validate>                      
+                    <comment>Dejar vacío para no especificar vigencia.</comment> 
+                </field>     
+                <field id="description" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Descripción</label>                    
+                    <validate>required-entry</validate>                      
+                    <comment>Descripción mostrada en la página de pago.</comment> 
+                </field>     
+                <field id="instructions" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Instrucciones</label>                    
+                    <validate>required-entry</validate>                      
+                    <comment>Descripción mostrada en correos electrónicos y notificaciones.</comment> 
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
