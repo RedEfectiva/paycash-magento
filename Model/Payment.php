@@ -185,7 +185,7 @@ class Payment extends \Magento\Payment\Model\Method\AbstractMethod
         $test_urlObtenerToken ='https://api-pcdocs-emisor.paycashglobal.com/v1/authre';     
         $test_urlObtenerReferencia = 'https://api-pcdocs-emisor.paycashglobal.com/v1/reference';
 
-        $produccion_urlObtenerToken = 'https://api-global-emisor.paycashglobal.com/v1/authre?country=MEX';      
+        $produccion_urlObtenerToken = 'https://api-global-emisor.paycashglobal.com/v1/authre?country=';      
         $produccion_urlObtenerReferencia = 'https://api-global-emisor.paycashglobal.com/v1/reference';
         
         
